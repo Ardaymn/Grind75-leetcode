@@ -1,0 +1,23 @@
+class Solution {
+public:
+    bool isPalindrome(string s) 
+    {
+       if(s.length()==0) return true;
+       string nev;
+       for(i=0; i < s.length(); i++)
+           if(isalnum(s[i])) 
+               nev += tolower(s[i]);
+    }
+
+    int l=0;
+    int r= nev.length()-1;
+
+    while( l < r)
+    {
+        if(nev[r] != nev[l]) 
+            return false;
+        l++;
+        r--;
+    }
+    return true;
+};
